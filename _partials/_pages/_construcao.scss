@@ -1,0 +1,165 @@
+body {
+  background-color: $bg;
+  background-image: url("../images/fundo_mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+main {
+  width: 100%;
+  height: 100%;
+  color: $white;
+}
+.grid-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Header Header"
+    "Content Content"
+    "Form Form";
+}
+.Header {
+  grid-area: Header;
+  padding: 40px 90px 40px 40px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.Content {
+  grid-area: Content;
+  padding: 40px;
+  h1 {
+    font-family: $font-family-title;
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #ffffee;
+    margin-bottom: 35px;
+  }
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 130%;
+    color: #ffffee;
+  }
+}
+
+.Form {
+  grid-area: Form;
+  padding: 15px 0 70px;
+  .wrapform {
+    width: 100%;
+    height: 100%;
+    background: #ffffee;
+    border-radius: 20px;
+  }
+  .form-container {
+    background: #ffffee;
+    border-radius: 0;
+    max-width: 35.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5rem 2.75rem;
+    position: relative;
+  }
+  h2 {
+    color: #707070;
+  }
+}
+
+/*
+=====================================================
+Meida Queries  576px
+=====================================================
+*/
+@media (min-width: 576px) {
+  .Header {
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+// 576px
+
+/*
+=====================================================
+Meida Queries  768px
+=====================================================
+*/
+@media (min-width: 768px) {
+}
+// 768px
+
+/*
+=====================================================
+Meida Queries  991px
+=====================================================
+*/
+@media (min-width: 991px) {
+  body {
+    background-image: url("../images/fundo.svg");
+    background-size: cover;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 50%;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Header Header"
+      "Content Form";
+  }
+
+  .Header {
+    grid-area: Header;
+    padding: 70px;
+    img {
+      width: 20%;
+      height: auto;
+    }
+  }
+
+  .Content {
+    grid-area: Content;
+    padding: 0 70px 0 180px;
+    h1 {
+      font-size: 72px;
+      line-height: 80px;
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 22px;
+      line-height: 180%;
+    }
+  }
+
+  .Form {
+    grid-area: Form;
+    padding: 70px;
+    .wrapform {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+    .form-container {
+      border-radius: 10px;
+      max-width: 35.25rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2.5rem 2.75rem;
+      position: relative;
+    }
+  }
+}
+// 991px
