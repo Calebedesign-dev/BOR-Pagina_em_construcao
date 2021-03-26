@@ -98,6 +98,9 @@ Meida Queries  768px
 =====================================================
 */
 @media (min-width: 768px) {
+  .grid-container {
+    height: 100vh;
+  }
   .Content {
     padding: 40px 200px;
   }
@@ -120,8 +123,9 @@ Meida Queries  991px
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 50%;
+    grid-template-rows: 30% 50%;
     gap: 0px 0px;
+
     grid-template-areas:
       "Header Header"
       "Content Form";
@@ -152,7 +156,7 @@ Meida Queries  991px
 
   .Form {
     grid-area: Form;
-    padding: 70px;
+    padding: 0 70px 70px 70px;
     .wrapform {
       width: 100%;
       height: 100%;
